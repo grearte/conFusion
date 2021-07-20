@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- **********************************************
+
+    STUDENT NAME: GUSTAVO REARTE
+
+***************************************************-->
+
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -17,10 +23,12 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
+            <!-- Notice the use of the data-toggle="collapse" and data-target="#Navbar" part of JS plugin in Bootstrap-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <!-- class="collapse" and the called id="Navbar"-->
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <!-- span or i can be used for fa-awesome icons -->
@@ -30,8 +38,10 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
             </div>
-        </div>
+        </div> <!-- container class from nav -->
     </nav>
+
+    <!-- ORIGINAL JUMBOTRON
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -41,6 +51,22 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+    --> 
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                    <!-- <button type="button" href="#reservetable" class="btn btn-warning btn-sm">Reserve Table</button> -->
+                    <a class="btn btn-warning" href="#reservetable" role="button">Reserve a table</a>
                 </div>
             </div>
         </div>
@@ -58,15 +84,15 @@
                     <!--mr-3 margin right 3-->
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthapizza">
                     <div class="media-body">
-                        <!--mt-0  margin top 0-->
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary"> $4.99</span></h2>
+                        <!--mt-0  margin top 0--> <!-- check Bootstap Badges -->
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT </span><span class="badge badge-pill badge-secondary"> $4.99</span></h2>
                         <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- SECOND ROW -->
+       
+        <!-- ORIGINAL SECOND ROW 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
@@ -74,6 +100,24 @@
             <div class="col col-sm col-md">
                 <h2>Weekend Grand Buffet</h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            </div>
+        </div>
+        -->
+
+        <!-- SECOND ROW with ASSIGNMENT-->
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>This Month's Promotions</h3>
+            </div>
+            <div class="col col-sm col-md">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="col col-sm col-md">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person</p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/buffet.png" alt="buffet">
+                </div>
             </div>
         </div>
 
@@ -94,7 +138,62 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- FOURTH ROW: ASSIGNMENT #2 7/19/2021 -->
+        <!-- <div class="row row-content align-items-center"> -->
+        <div class="row row-content d-flex justify-content-center "> 
+            <div class="col-12 col-sm-8 align-items-center">
+                <div class="card">
+                    <h3 id="reservetable" class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card body">
+                        <form>
+                            <label for="guestnumber" class="col-form-label">Number of Guests</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio2">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                <label class="form-check-label" for="inlineRadio2">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                <label class="form-check-label" for="inlineRadio2">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                <label class="form-check-label" for="inlineRadio2">6</label>
+                            </div>
+                            <!-- end of radio options 1-6 -->
+                            <div class="form-group row">
+                                <label for="datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                                <div class="col-5 col-md-3">
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+                                <div class="col-7 col-md-7">
+                                    <input type="time" class="form-control" id="time" name="time">
+                                </div>
+                            </div> <!-- end of date & time options -->
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form> <!-- end of form -->
+                    </div> <!-- end of card body-->
+                    </div> <!-- end of card-header -->
+                </div> <!-- end of card -->
+            </div> <!-- end of column alignment -->
+        </div> <!-- end of Assignment 2 row -->
+    </div> <!-- container class ends -->
 
     <footer class="footer">
         <div class="container">
