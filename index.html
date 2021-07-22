@@ -3,7 +3,7 @@
 
 <!-- **********************************************
 
-    STUDENT NAME: GUSTAVO REARTE
+    NAME: GUSTAVO REARTE
 
 ***************************************************-->
 
@@ -37,25 +37,56 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <!-- required for the MODAL -->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div> <!-- container class from nav -->
     </nav>
 
-    <!-- ORIGINAL JUMBOTRON
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+    <!-- Bootstrap advises to use MODALS at the top -->
+    <!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </header>
-    --> 
+    </div>
+
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -65,14 +96,79 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <!-- my version using button first -->
                     <!-- <button type="button" href="#reservetable" class="btn btn-warning btn-sm">Reserve Table</button> -->
-                    <a class="btn btn-warning" href="#reservetable" role="button">Reserve a table</a>
+
+                    <!--https://getbootstrap.com/docs/4.0/components/tooltips/ -->
+                    <a role="button" class="btn btn-block nav-link btn-warning btn-sm"
+                        data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reservetable">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
+        <!-- carousel -->
+        <!-- https://getbootstrap.com/docs/4.0/components/carousel/ -->
+        <div class="row row-content">
+            <div class="col">
+
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" 
+                                src="img/uthappizza.png" alt="uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" 
+                                src="img/buffet.png" alt="buffet">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" 
+                                src="img/alberto.png" alt="alberto">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <!-- setting controls for the carousel. work with jQuery script at the bottom-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
+                </div> <!-- mycarousel -->
+            </div> <!-- col -->
+        </div> <!-- row-content -->
+    </div> <!-- container -->
 
         <!-- FIRST ROW -->
         <div class="row row-content align-items-center">
@@ -141,11 +237,16 @@
 
         <!-- FOURTH ROW: ASSIGNMENT #2 7/19/2021 -->
         <!-- <div class="row row-content align-items-center"> -->
+        <!-- ccheckbox ratio resoruces
+            https://getbootstrap.com/docs/4.0/components/buttons/#checkbox-and-radio-buttons
+        -->
         <div class="row row-content d-flex justify-content-center "> 
             <div class="col-12 col-sm-8 align-items-center">
                 <div class="card">
                     <h3 id="reservetable" class="card-header bg-warning text-white">Reserve a Table</h3>
                     <div class="card body">
+                        <!-- form resources 
+                        https://getbootstrap.com/docs/4.0/components/forms/ -->
                         <form>
                             <label for="guestnumber" class="col-form-label">Number of Guests</label>
                             <div class="form-check form-check-inline">
@@ -240,6 +341,26 @@
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
+ 
+ <!-- script for original tooltip here -->
+ <script>
+     $(document).ready(function() {
+         $('[data-toggle="tooltip"]').tooltip();
+     })
+ </script>
+ 
+ <!-- script to add functionality to carousel controls pause/play -->
+<script>
+    $(document).ready(function(){
+        $("#mycarousel").carousel( { interval: 2000 } );
+        $("#carousel-pause").click(function(){
+            $("#mycarousel").carousel('pause');
+        });
+        $("#carousel-play").click(function(){
+            $("#mycarousel").carousel('cycle');
+        });
+    });
+</script>
 
+</body>
 </html>
