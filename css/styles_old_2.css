@@ -54,15 +54,18 @@ body {
   z-index: 1; }
 
 .modal-header {
-  background: #5133a5;
-  color: floralwhite; }
-
+    background-color: #5133a5;
+    color: floralwhite;
+    opacity: 1;
+  }
 .modal-body {
-  background: #d1c5e8; }
-
+  background: #d1c5e8;
+}
 .modal-footer {
-  background: #d1c5e8; }
+  background: #d1c5e8;
+}
 
 .close {
   color: floralwhite;
-  opacity: 1; }
+  opacity: 1;
+}
